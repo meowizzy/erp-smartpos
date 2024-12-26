@@ -1,0 +1,50 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__top-left">
+                <a href="/" class="footer__logo">
+                    <svg>
+                        <use xlink:href="#footerLogo"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer__top-right">
+                <a href="tel:{{footer_section.phone}}" class="footer__phone">{{footer_section.phone}}</a>
+                <ul class="footer__socials">
+                    {{#each footer_section.socials}}
+                        <li class="footer__socials-item">
+                            <a href="{{this.url}}">
+                                {{{this.icon}}}
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bot">
+            <div class="footer__bot-left">
+                <div class="footer__copyright">
+                    © <span id="curYear">{#CURRENT_YEAR#}</span> {{{footer_section.copyright}}}
+                </div>
+            </div>
+            <div class="footer__bot-right">
+                <nav class="footer__menu">
+                    <div class="footer__menu-title">
+                        <span>{{footer_section.menu.[0].label}}</span>
+                    </div>
+                    <ul class="footer__menu-list">
+                        {{#each footer_section.menu}}
+                            {{#if this.url}}
+                                <li class="footer__menu-item">
+                                    <a href="{{this.url}}">
+                                        {{this.label}}
+                                    </a>
+                                </li>
+                            {{/if}}
+                        {{/each}}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>

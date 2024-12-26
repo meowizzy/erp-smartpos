@@ -1,0 +1,86 @@
+:root {
+  // colors
+  --white-rgb: 255,255,255;
+  --black-rgb: 0,0,0;
+  --dark-rgb: 29,27,51;
+
+  --color-white: rgb(var(--white-rgb));
+  --color-black: rgb(var(--black-rgb));
+  --color-gray: #F8F9FC;
+  --color-light-gray: #F1F2F3;
+  --color-dark: rgb(var(--dark-rgb));
+  --color-light-dark: rgba(var(--dark-rgb), .5);
+  --border-color: #DEDEDE;
+
+  --primary: #3690F7;
+  --secondary: #4D586D;
+  --input-color: #98A2B3;
+
+  --mobile-slider-background: #F1F2F3;
+
+  --primary-gradient: linear-gradient(90deg, #2150E7 0%, var(--primary) 100%);
+  --accent-gradient: linear-gradient(90deg, #E79821 0%, #F7CD36 100%);
+
+  --site-color: #F6F7F8;
+
+  // fonts
+
+  --initial-font: "Arial", "Helvetica", "sans-serif";
+  --font-family: "Gilroy", var(--initial-font);
+  --secondary-font: "Montserrat", var(--font-family);
+
+  --font-weight-r: 400;
+  --font-weight-m: 500;
+  --font-weight-s: 600;
+  --font-weight-b: 700;
+
+  --font-size-s: 12px;
+  --font-line-s: 14.63px;
+  --font-s: var(--font-size-s)/var(--font-line-s) var(--font-family);
+
+  --font-size-sm: 14px;
+  --font-line-sm: var(--font-line-s);
+  --font-sm: var(--font-size-sm)/var(--font-line-sm) var(--font-family);
+
+  --font-size-m: 16px;
+  --font-line-m: 28px;
+  --font-m: var(--font-size-m)/var(--font-line-m) var(--font-family);
+
+  --font-size-xm: 18px;
+  --font-line-xm: 28px;
+  --font-xm: var(--font-size-xm)/var(--font-line-xm) var(--font-family);
+
+  --font-size-l: 20px;
+  --font-line-l: 24.38px;
+  --font-l: var(--font-size-l)/var(--font-line-l) var(--font-family);
+
+  --font-size-xl: 32px;
+  --font-line-xl: 41.6px;
+  --font-xl: var(--font-size-xl)/var(--font-line-xl) var(--font-family);
+
+  --font-size-xxl: 44px;
+  --font-line-xxl: 57.2px;
+  --font-xxl: var(--font-size-xxl)/var(--font-line-xxl) var(--font-family);
+
+  --font-size-large: 50px;
+  --font-line-large: 54px;
+  --font-large: var(--font-size-large)/var(--font-line-large) var(--font-family);
+
+  // container
+  --container-width: 1490px;
+
+  // border radius
+
+  --radius-small: 6px;
+  --radius-medium: 8px;
+
+  --radius-s: 10px;
+  --radius-sm: 18px;
+  --radius-m: 30px;
+  --radius-xm: 50px;
+  --radius-l: 50%;
+
+  // other
+
+  --transition: .3s;
+}

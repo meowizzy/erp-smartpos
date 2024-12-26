@@ -1,0 +1,13 @@
+@import "./_mixins.scss";
+@import "./_variables.scss";
+@import "./_fonts.scss";
+@import "./_reset.scss";
+@import "./_global.scss";
+
+// blocks
+@import "./modules/_button.scss";
+@import "./modules/_header.scss";
+@import "./modules/_footer.scss";
+
+@import "./modules/_callbackForm.scss";
+@import "./modules/_modal.scss";

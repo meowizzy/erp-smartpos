@@ -1,0 +1,28 @@
+<section class="callback" id="callback">
+    <div class="container">
+        <div class="callback__col">
+            <div class="callback__head">
+                <div class="callback__title text-xl">
+                    <span>{{callback_form.title}}</span>
+                </div>
+                <div class="callback__desc text-xm">
+                    {{{callback_form.subtitle}}}
+                </div>
+            </div>
+            <div class="callback__form">
+                <form class="form">
+                    <div class="form__fields-group">
+                        {{#each callback_form.inputs}}
+                            <div class="form__field">
+                                <input type="{{this.type}}" name="{{this.name}}" required="{{this.required}}" placeholder={{this.placeholder}}>
+                            </div>
+                        {{/each}}
+                    </div>
+                    <div class="form__field">
+                        {{> button title=callback_form.form_button selectors="primary"}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
