@@ -1,13 +1,16 @@
-<header class="header">
-    <div class="header__left-col">
+<header class="header container">
+    <div class="header__left">
         <a href="/" class="header__logo">
-            <svg viewBox="0 0 240 50">
+            <svg width="285" height="55" viewBox="0 0 285 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#siteLogo" />
             </svg>
         </a>
     </div>
-    <div class="header__right-col">
-        {{> button title=alt_lang.name link=alt_lang.url selectors="bordered ripple"}}
+    <div class="header__middle">
+        {{> header-menu }}
+    </div>
+    <div class="header__right">
+        {{> language-switcher }}
     </div>
 </header>
 

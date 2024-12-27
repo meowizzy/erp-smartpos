@@ -4,3 +4,4 @@ export const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbzlXKL
 export const BASE_URL = "https://api.smartpos.uz/api";
 export const SECOND_BASE_URL = "https://api.support24.uz/api";
 export const SOURCE = "ODDIY";
+export const SITE_LANG = document.documentElement.lang;

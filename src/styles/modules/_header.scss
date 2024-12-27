@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 58px;
+  padding-bottom: 58px;
+
+  &__left {
+    margin-right: 82px;
+  }
+
+  &__logo {
+    max-width: 285px;
+    width: 100%;
+    svg, img {
+      max-width: 100%;
+    }
+  }
+
+  &__middle {
+    flex-grow: 1;
+  }
+
+  &__navigation {
+
+    &-list {
+      padding-left: 0;
+      display: flex;
+      align-items: center;
+      list-style: none;
+      flex-wrap: wrap;
+
+      li {
+        margin-right: 32px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__right {}
+}

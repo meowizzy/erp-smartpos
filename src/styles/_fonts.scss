@@ -1,0 +1,20 @@
+@include font-face("Gilroy", "../fonts/gilroy/Gilroy-Regular", 400, normal, eot ttf woff);
+@include font-face("Gilroy", "../fonts/gilroy/Gilroy-Medium", 500, normal, eot ttf woff);
+@include font-face("Gilroy", "../fonts/gilroy/Gilroy-SemiBold", 600, normal, eot ttf woff);
+@include font-face("Gilroy", "../fonts/gilroy/Gilroy-Bold", 700, normal, eot ttf woff);
+
+@include font-face("Stapel", "../fonts/stapel/Stapel-Bold", 700, normal, eot ttf woff woff2);
+@include font-face("Stapel", "../fonts/stapel/Stapel-ExtraBold", 800, normal, eot ttf woff woff2);
+@include font-face("Stapel", "../fonts/stapel/Stapel-ExtraLight", 200, normal, eot ttf woff woff2);
+@include font-face("Stapel", "../fonts/stapel/Stapel-Italic", 400, italic, eot ttf woff woff2);
+@include font-face("Stapel", "../fonts/stapel/Stapel-Light", 300, normal, eot ttf woff woff2);
+@include font-face("Stapel", "../fonts/stapel/Stapel-Medium", 500, normal, eot ttf woff woff2);
+
+@include font-face("StapelExpanded", "../fonts/stapel/Stapel-ExpandedBlack", 900, normal, eot ttf woff woff2);
+@include font-face("StapelExpanded", "../fonts/stapel/Stapel-ExpandedBold", 700, normal, eot ttf woff woff2);
+@include font-face("StapelExpanded", "../fonts/stapel/Stapel-ExpandedExtraBold", 800, normal, eot ttf woff woff2);
+
+@include font-face("StapelSemiExpanded", "../fonts/stapel/Stapel-SemiExpandedBlack", 900, normal, eot ttf woff woff2);
+@include font-face("StapelSemiExpanded", "../fonts/stapel/Stapel-SemiExpandedBold", 700, normal, eot ttf woff woff2);
+@include font-face("StapelSemiExpanded", "../fonts/stapel/Stapel-SemiExpandedExtraBold", 800, normal, eot ttf woff woff2);
+@include font-face("StapelSemiExpanded", "../fonts/stapel/Stapel-SemiExpandedMedium", 500, normal, eot ttf woff woff2);

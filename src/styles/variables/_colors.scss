@@ -1,0 +1,16 @@
+:root {
+  --color-white-rgb: 255, 255, 255;
+  --color-white: rgb(var(--color-white-rgb));
+
+  --color-black-rgb: 0, 0, 0;
+  --color-black: rgb(var(--color-black-rgb));
+
+  --color-primary-rgb: 64, 155, 116;
+  --color-primary: rgb(var(--color-primary-rgb));
+
+  --color-gray-rgb: 242, 243, 247;
+  --color-gray: rgb(var(--color-gray-rgb));
+
+  --color-light-gray-rgb: 229, 231, 236;
+  --color-light-gray: var(var(--color-light-gray-rgb));
+}

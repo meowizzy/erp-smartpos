@@ -1,6 +1,17 @@
 body {
-  color: var(--color-dark);
-  font: var(--font-weight-m) var(--font-sm);
+  color: var(--color-black);
+  font-family: var(--font-family);
+}
+
+a {
+  color: inherit;
+  font-family: var(--primary-font);
+  font-weight: 300;
+  transition: color var(--transition);
+
+  &:hover {
+    color: var(--color-primary);
+  }
 }
 
 html {
@@ -46,8 +57,7 @@ html, body {
 
 .container {
   max-width: var(--container-width);
-  margin: 10px auto;
-  border-radius: var(--radius-m);
+  margin: 0 auto;
 
   @media all and (max-width: 1490px) {
     margin: 10px 12px;

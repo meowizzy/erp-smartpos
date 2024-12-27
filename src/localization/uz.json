@@ -1,1 +1,24 @@
-{}
+{
+  "menu": [
+    {
+      "label": "Функционал",
+      "url": "#"
+    },
+    {
+      "label": "Партнеры",
+      "url": "#"
+    },
+    {
+      "label": "Тип бизнеса",
+      "url": "#"
+    }
+  ],
+  "errors": {
+    "incorrectPhoneNumber": "Некорректный номер телефона",
+    "failedToSubmitRequest": "Неудалось отправить заявку"
+  },
+  "notifications": {
+    "requisitionSuccess": "Заявка успешно отправлена. <br> <span class=\"sub\" style=\"font-size: var(--font-size-xm)\">Мы свяжемся с Вами в ближайшее время.</span>"
+  },
+  "copyrightText": "Smartpos. Все права защищены."
+}

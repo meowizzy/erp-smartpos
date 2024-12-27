@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const uzTemplateData = require("./src/localization/uz.json");
 const ruTemplateData = require("./src/localization/ru.json");
+const enTemplateData = require("./src/localization/en.json");
 
 const templates = {
     ru: {
@@ -34,7 +35,7 @@ module.exports = (env) => {
         entry: [
             "@babel/polyfill",
             path.resolve(__dirname, "src", "./js/index.js"),
-            path.resolve(__dirname, "src", "./scss/main.scss")
+            path.resolve(__dirname, "src", "./styles/main.scss")
         ],
         output: {
             path: path.resolve(__dirname, "dist"),
@@ -112,15 +113,16 @@ module.exports = (env) => {
                     templateParameters: Object.assign({
                         title: "Smartpos Business",
                         lang: key,
+                        copyright: `© <span id="curYear">${new Date().getFullYear()}</span> ${tpl.data.copyrightText}`
                     }, tpl.data)
                 })
             }),
-            new CopyWebpackPlugin({
+            /*new CopyWebpackPlugin({
                 patterns: [
                     { from: "./src/images",  to: "./assets" },
                     { from: "./src/media",  to: "./assets" }
                 ]
-            }),
+            }),*/
             new MiniCssExtractPlugin({
                 filename: `css/bundle.css?ver=${Date.now()}`,
             }),

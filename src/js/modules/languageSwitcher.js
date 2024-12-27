@@ -1,25 +1,23 @@
-import { LOCAL_STORAGE_LANG_KEY } from "../app/constants";
+import { LOCAL_STORAGE_LANG_KEY, SITE_LANG } from "../app/constants";
+import { redirectPaths } from "../../localization";
 
 export const languageSwitcher = () => {
     const langSwitcherOpener = document.querySelector(".languageSwitcher__head .languageSwitcher__item");
     const langSwitcherOpenerIcon = document.querySelector(".languageSwitcher__head .languageSwitcher__icon");
     const langSwitcherItems = document.querySelectorAll(".languageSwitcher__body .languageSwitcher__item");
-    const siteLang = document.documentElement.lang;
     const localStorageLang = localStorage.getItem(LOCAL_STORAGE_LANG_KEY);
 
     if (!langSwitcherOpener) return;
 
     if (localStorageLang) {
-        if (siteLang !== localStorageLang && !location.pathname.includes("textolite")) {
-            window.location.href = localStorageLang === "ru" ? '/' : "/uz.html";
+        if (SITE_LANG !== localStorageLang && !location.pathname.includes("textolite")) {
+            window.location.href = redirectPaths[localStorageLang];
         }
     }
 
-    if (siteLang === "ru") {
-        langSwitcherOpenerIcon.innerHTML = langSwitcherItems[0].querySelector(".languageSwitcher__icon").outerHTML;
-    } else {
-        langSwitcherOpenerIcon.innerHTML = langSwitcherItems[1].querySelector(".languageSwitcher__icon").outerHTML;
-    }
+    const currFlagItem = Array.from(langSwitcherItems).find((item) => item.dataset.lang === SITE_LANG);
+
+    langSwitcherOpenerIcon.outerHTML = currFlagItem.innerHTML;
 
     const handleOpenDropdown = (e) => {
         const target = e.target;

@@ -17,14 +17,14 @@ export const modal = () => {
     const handleClick = (e) => {
         const target = e.target;
 
-        if (target.closest("[localization-modal-target]")) {
+        if (target.closest("[data-modal-target]")) {
             const targetModal = document.querySelector(`[data-modal-id=${target.dataset.modalTarget}]`);
 
             openModal();
             modalDest.innerHTML = targetModal.outerHTML;
         }
 
-        if (target.closest(".site-modal__close") || !target.closest(".site-modal__window") && !target.closest("[localization-modal-target]")) {
+        if (target.closest(".site-modal__close") || !target.closest(".site-modal__window") && !target.closest("[data-modal-target]")) {
             closeModal();
         }
     };

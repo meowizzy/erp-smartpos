@@ -1,5 +1,5 @@
 import { isMobile } from "../helpers/isMobile";
-import { templatesData } from "./templates";
+import { translate } from "../../localization";
 
 export const servicesListDropDown = () => {
     const lists = document.querySelectorAll(".services-list--with-dropdown");
@@ -31,7 +31,7 @@ export const servicesListDropDown = () => {
             list.insertAdjacentHTML("afterend", `           
                 <button class="dropdown-trigger">
                     <span class="services-list__title">
-                        ${lang === "ru" ? templatesData.ru.scanner_section.dropDownButton : templatesData.uz.scanner_section.dropDownButton}
+                        ${translate("scanner_section.dropDownButton")}
                     </span>
                     <span class="dropdown-trigger__arrow">
                         <svg>
