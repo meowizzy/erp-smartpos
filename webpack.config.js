@@ -110,11 +110,11 @@ module.exports = (env) => {
                     inject: "body",
                     chunks: ["main"],
                     minify: false,
-                    templateParameters: Object.assign({
+                    templateParameters: Object.assign(tpl.data,{
                         title: "Smartpos Business",
                         lang: key,
                         copyright: `© <span id="curYear">${new Date().getFullYear()}</span> ${tpl.data.copyrightText}`
-                    }, tpl.data)
+                    })
                 })
             }),
             /*new CopyWebpackPlugin({
@@ -123,7 +123,7 @@ module.exports = (env) => {
                     { from: "./src/media",  to: "./assets" }
                 ]
             }),*/
-            new MiniCssExtractPlugin({
+            isDev && new MiniCssExtractPlugin({
                 filename: `css/bundle.css?ver=${Date.now()}`,
             }),
             new webpack.DefinePlugin({

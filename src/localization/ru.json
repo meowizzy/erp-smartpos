@@ -1,4 +1,26 @@
 {
+  "advantages": [
+    {
+      "text": "Система для управления продажами, товарами и программами лояльности",
+      "icon": "<svg width=\"36\" height=\"36\" viewBox=\"0 0 36 36\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><use xlink:href='#graphIcon'/></svg>"
+    },
+    {
+      "text": "Готовые комплекты оборудования\n",
+      "icon": "<svg width=\"37\" height=\"36\" viewBox=\"0 0 37 36\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><use xlink:href='#boxIcon'/></svg>"
+    },
+    {
+      "text": "Настройка, обучение\nи поддержка 24/7",
+      "icon": "<svg width=\"37\" height=\"36\" viewBox=\"0 0 37 36\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><use xlink:href='#headPhonesIcon'/></svg>"
+    }
+  ],
+  "banner": {
+    "title": "СИСТЕМА \u2028АВТОМАТИЗАЦИИ БИЗНЕСА",
+    "subtitle": "Учет товаров, клиентов, кассы, финансов и многое другое — все в одной простой и удобной системе",
+    "button": {
+      "text": "Получить консультацию",
+      "url": "#callback"
+    }
+  },
   "menu": [
     {
       "label": "Функционал",
@@ -10,6 +32,10 @@
     },
     {
       "label": "Тип бизнеса",
+      "url": "#"
+    },
+    {
+      "label": "Касса",
       "url": "#"
     }
   ],

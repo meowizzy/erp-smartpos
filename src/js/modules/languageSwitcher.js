@@ -17,6 +17,8 @@ export const languageSwitcher = () => {
 
     const currFlagItem = Array.from(langSwitcherItems).find((item) => item.dataset.lang === SITE_LANG);
 
+    currFlagItem.classList.add("languageSwitcher__item--active");
+
     langSwitcherOpenerIcon.outerHTML = currFlagItem.innerHTML;
 
     const handleOpenDropdown = (e) => {
@@ -27,11 +29,14 @@ export const languageSwitcher = () => {
         dropDown.classList.toggle("opened");
     };
 
-    const onSelectLanguage = (e) => {
+    const handleClickSelectLanguage = (e) => {
         const target = e.target;
-        const lang = target.dataset.lang;
 
-        localStorage.setItem(LOCAL_STORAGE_LANG_KEY, lang);
+        if (target.closest(".languageSwitcher__item")) {
+            const lang = target.dataset.lang;
+
+            localStorage.setItem(LOCAL_STORAGE_LANG_KEY, lang);
+        }
     };
 
     const handleClickOutside = (e) => {
@@ -44,6 +49,7 @@ export const languageSwitcher = () => {
 
     document.addEventListener("click", handleClickOutside);
 
-    langSwitcherItems.forEach((item) => item.addEventListener("click", onSelectLanguage));
+    // langSwitcherItems.forEach((item) => item.addEventListener("click", handleClickSelectLanguage));
+    document.addEventListener("click", handleClickSelectLanguage);
     langSwitcherOpener.addEventListener("click", handleOpenDropdown);
 };

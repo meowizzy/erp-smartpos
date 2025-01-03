@@ -14,7 +14,12 @@ if (__IS_DEV__) {
         en: dataEn
     };
 
-    let templateData = template(localization[SITE_LANG]);
+    const copyright = `© <span id="curYear">${new Date().getFullYear()}</span> ${localization[SITE_LANG].copyrightText}`;
+
+    let templateData = template({
+        ...localization[SITE_LANG],
+        copyright
+    });
 
     document.body.innerHTML = new DOMParser().parseFromString(templateData, "text/html").body.outerHTML;
 }

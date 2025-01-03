@@ -1,49 +1,15 @@
 <footer class="footer">
     <div class="container">
-        <div class="footer__top">
-            <div class="footer__top-left">
-                <a href="/" class="footer__logo">
-                    <svg>
-                        <use xlink:href="#footerLogo"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="footer__top-right">
-                <a href="tel:{{footer_section.phone}}" class="footer__phone">{{footer_section.phone}}</a>
-                <ul class="footer__socials">
-                    {{#each footer_section.socials}}
-                        <li class="footer__socials-item">
-                            <a href="{{this.url}}">
-                                {{{this.icon}}}
-                            </a>
-                        </li>
-                    {{/each}}
-                </ul>
-            </div>
+        <div class="footer__left">
+            <a href="/" class="footer__logo">
+                <svg width="285" height="55" viewBox="0 0 285 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#footerLogo"/>
+                </svg>
+            </a>
         </div>
-        <div class="footer__bot">
-            <div class="footer__bot-left">
-                <div class="footer__copyright">
-                    {{{copyright}}}
-                </div>
-            </div>
-            <div class="footer__bot-right">
-                <nav class="footer__menu">
-                    <div class="footer__menu-title">
-                        <span>{{footer_section.menu.[0].label}}</span>
-                    </div>
-                    <ul class="footer__menu-list">
-                        {{#each footer_section.menu}}
-                            {{#if this.url}}
-                                <li class="footer__menu-item">
-                                    <a href="{{this.url}}">
-                                        {{this.label}}
-                                    </a>
-                                </li>
-                            {{/if}}
-                        {{/each}}
-                    </ul>
-                </nav>
+        <div class="footer__right">
+            <div class="footer__copyright">
+                <span>{{{copyright}}}</span>
             </div>
         </div>
     </div>

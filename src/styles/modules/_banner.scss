@@ -1,0 +1,36 @@
+.banner {
+  &__inner {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    padding: 50px 0;
+    margin-bottom: 87px;
+  }
+  &__left {
+    width: 52%;
+    margin-right: 50px;
+  }
+  &__title {
+    font-size: 62px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    margin-bottom: 16px;
+  }
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(124, 124, 124, 1);
+    margin-bottom: 42px;
+  }
+  &__right {
+    --test: calc(100vw - var(--container-width));
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 52%;
+    right: calc((100vw - var(--container-width)) / 2 * -1);
+    background-image: url("../images/banner.png");
+    @include bg-op(cover, center left, no-repeat);
+  }
+}

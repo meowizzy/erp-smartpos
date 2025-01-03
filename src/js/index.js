@@ -4,6 +4,7 @@ import { modal } from "./modules/modal";
 import { getCookie } from "./helpers/cookie";
 import { COOKIE_REQUEST_BLOCK } from "./app/constants";
 import { languageSwitcher } from "./modules/languageSwitcher";
+import { breakpoints } from "./modules/breakpoints";
 import "../localization/index";
 import "./libs/input-mask.min";
 import "swiper/css";
@@ -20,6 +21,7 @@ const onDocumentLoaded = () => {
     callbackForm();
     modal();
     languageSwitcher();
+    breakpoints();
 };
 
 document.addEventListener("DOMContentLoaded", onDocumentLoaded);

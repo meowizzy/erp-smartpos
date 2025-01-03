@@ -1,0 +1,18 @@
+<section id="advantages">
+    <div class="advantages mg-block">
+        <div class="container">
+            <div class="advantages__list">
+                {{#each advantages }}
+                    <div class="advantages__item">
+                        <div class="advantages__icon">
+                            {{{this.icon}}}
+                        </div>
+                        <div class="advantages__text">
+                            {{{this.text}}}
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</section>

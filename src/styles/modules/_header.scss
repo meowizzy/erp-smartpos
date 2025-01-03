@@ -4,13 +4,23 @@
   padding-top: 58px;
   padding-bottom: 58px;
 
+  @media all and (max-width: 959px) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
   &__left {
     margin-right: 82px;
   }
 
   &__logo {
+    display: inline-block;
+    line-height: 0;
     max-width: 285px;
     width: 100%;
+    @media all and (max-width: 1024px) {
+      max-width: 150px;
+    }
     svg, img {
       max-width: 100%;
     }
@@ -18,10 +28,15 @@
 
   &__middle {
     flex-grow: 1;
+    @media all and (max-width: 959px) {
+      display: none;
+    }
   }
 
   &__navigation {
-
+    @media all and (max-width: 959px) {
+      margin-bottom: 16px;
+    }
     &-list {
       padding-left: 0;
       display: flex;
@@ -29,15 +44,70 @@
       list-style: none;
       flex-wrap: wrap;
 
+      @media all and (max-width: 959px) {
+        flex-direction: column;
+        align-items: stretch;
+        margin-left: -16px;
+        margin-right: -16px;
+      }
+
       li {
-        margin-right: 32px;
+        @media all and (min-width: 960px) {
+          margin-right: 32px;
+        }
       }
 
       a {
         text-decoration: none;
+        @media all and (max-width: 959px) {
+          display: block;
+          padding: 12px 16px;
+          &:active {
+            background-color: var(--color-primary);
+          }
+        }
       }
     }
   }
 
-  &__right {}
+  &__right {
+    display: flex;
+    align-items: center;
+    @media all and (max-width: 959px) {
+      margin-left: auto;
+    }
+  }
+
+  &__burger {
+    width: 32px;
+    height: 32px;
+    line-height: 0;
+    cursor: pointer;
+    @media all and (min-width: 960px) {
+      display: none;
+    }
+    span, span:before, span:after {
+      background-color: var(--color-black);
+      border-radius: var(--radius-xl);
+      height: 2px;
+      pointer-events: none;
+    }
+    span {
+      display: inline-block;
+      width: 70%;
+      position: relative;
+      &:before, &:after {
+        @include pseudo();
+        width: 100%;
+      }
+
+      &:before {
+        top: -7px;
+      }
+
+      &:after {
+        bottom: -7px;
+      }
+    }
+  }
 }

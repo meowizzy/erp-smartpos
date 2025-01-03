@@ -1,6 +1,10 @@
 body {
   color: var(--color-black);
   font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
 }
 
 a {
@@ -24,48 +28,23 @@ html, body {
   scroll-behavior: smooth;
 }
 
-.ripple {
-  position: relative;
-  overflow: hidden;
-  &:before {
-    @include pseudo();
-    top: var(--y);
-    left: var(--x);
-    pointer-events: none;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    transition: .5s linear;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    will-change: width, height;
-  }
-
-  &--dark {
-    &:before {
-      background-color: var(--color-black);
-    }
-  }
-
-  &:hover {
-    &:before {
-      width: var(--size);
-      height: var(--size);
-    }
-  }
-}
-
 .container {
   max-width: var(--container-width);
+  width: 100%;
   margin: 0 auto;
 
-  @media all and (max-width: 1490px) {
-    margin: 10px 12px;
+  @media all and (max-width: 1200px) {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
-  @media all and (max-width: 1180px) {
-    margin: 10px 6px;
-  }
+  //@media all and (max-width: 1490px) {
+  //  margin: 10px 12px;
+  //}
+  //
+  //@media all and (max-width: 1180px) {
+  //  margin: 10px 6px;
+  //}
 }
 
 .slider-pagination {
@@ -184,4 +163,15 @@ html, body {
       background-color: var(--color-dark);
     }
   }
+}
+
+.mg-block {
+  margin-bottom: 140px;
+}
+
+.title-lg {
+  font-size: 42px;
+  font-family: var(--primary-font);
+  text-transform: uppercase;
+  font-weight: 600;
 }

@@ -1,53 +1,57 @@
-.site-modal {
+.modal, .drawer {
+  $self: &;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(var(--black-rgb), .5);
-  @include bg-op(cover, center, no-repeat);
-  z-index: 1000;
-  opacity: 0;
   pointer-events: none;
-  transition: opacity var(--transition);
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-  &.opened {
-    opacity: 1;
-    pointer-events: all;
-  }
-  &__close {
+
+  &__backdrop {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color var(--transition);
+    background-color: rgba(var(--color-black-rgb), 0);
+  }
+
+  &.opened {
+    pointer-events: all;
+    .modal__backdrop, .drawer__backdrop {
+      background-color: rgba(var(--color-black-rgb), .5);
+    }
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
     width: 30px;
     height: 30px;
     cursor: pointer;
-    @media all and (max-width: 800px) {
-      top: 10px;
-      right: 27px;
-      z-index: 1;
-    }
+    //@media all and (max-width: 800px) {
+    //  top: 10px;
+    //  right: 27px;
+    //  z-index: 1;
+    //}
     svg {
       max-width: 100%;
       max-height: 100%;
     }
   }
-  &__window {
-    background-color: var(--color-white);
-    max-width: 600px;
-    border-radius: var(--radius-sm);
-    padding: 40px;
-    position: relative;
-  }
   &__content {
     height: 100%;
     overflow: auto;
     max-height: 400px;
-    @media all and (max-width: 360px) {
-      padding: 50px 10px 50px 0;
-    }
+    //@media all and (max-width: 360px) {
+    //  padding: 50px 10px 50px 0;
+    //}
     &::-webkit-scrollbar {
       width: 5px;
       height: 5px;
@@ -77,5 +81,33 @@
       display: block;
       height: 100px;
     }
+  }
+}
+
+.modal {
+  $self: &;
+  &__window {
+    transition: transform var(--transition), opacity var(--transition);
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+    background-color: var(--color-white);
+    max-width: 600px;
+    width: 100%;
+    border-radius: var(--radius-sm);
+    padding: 40px;
+    position: relative;
+  }
+  &.opened {
+    #{$self}__window {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+.drawer {
+
+  &__modal-content {
+    overflow-x: hidden !important;
   }
 }
