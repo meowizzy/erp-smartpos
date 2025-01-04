@@ -1,0 +1,33 @@
+<section id="possibilities">
+    <div class="possibilities mg-block">
+        <div class="container">
+            <div class="possibilities__inner">
+                <div class="possibilities__title title-lg">
+                    <span>{{{possibilities.title}}}</span>
+                </div>
+                <div class="possibilities__grid">
+                    {{#each possibilities.items}}
+                        <div class="possibilities__item">
+                            <div class="possibilities__item-content">
+                                <div class="possibilities__item-title title-md">
+                                    <span>{{{this.title}}}</span>
+                                </div>
+                                <div class="possibilities__item-text">
+                                    {{{this.text}}}
+                                </div>
+                                <div class="possibilities__item-text-bottom">
+                                    {{{this.textBottom}}}
+                                </div>
+                            </div>
+                            <div class="possibilities__item-pic-outer">
+                                <div class="possibilities__item-pic">
+                                    <img src="{{this.url}}" alt="{{this.title}}">
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

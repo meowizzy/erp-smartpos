@@ -5,3 +5,4 @@ export const BASE_URL = "https://api.smartpos.uz/api";
 export const SECOND_BASE_URL = "https://api.support24.uz/api";
 export const SOURCE = "ODDIY";
 export const SITE_LANG = document.documentElement.lang;
+export const SCROLL_WIDTH = window.innerWidth - document.documentElement.clientWidth;

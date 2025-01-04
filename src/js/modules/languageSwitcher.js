@@ -7,6 +7,8 @@ export const languageSwitcher = () => {
     const langSwitcherItems = document.querySelectorAll(".languageSwitcher__body .languageSwitcher__item");
     const localStorageLang = localStorage.getItem(LOCAL_STORAGE_LANG_KEY);
 
+    console.log(localStorageLang)
+
     if (!langSwitcherOpener) return;
 
     if (localStorageLang) {
@@ -32,10 +34,12 @@ export const languageSwitcher = () => {
     const handleClickSelectLanguage = (e) => {
         const target = e.target;
 
-        if (target.closest(".languageSwitcher__item")) {
+        if (target.closest(".languageSwitcher__body .languageSwitcher__item")) {
             const lang = target.dataset.lang;
 
-            localStorage.setItem(LOCAL_STORAGE_LANG_KEY, lang);
+            if (lang) {
+                localStorage.setItem(LOCAL_STORAGE_LANG_KEY, lang);
+            }
         }
     };
 

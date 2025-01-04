@@ -8,6 +8,8 @@ import { breakpoints } from "./modules/breakpoints";
 import "../localization/index";
 import "./libs/input-mask.min";
 import "swiper/css";
+import { tabs } from "./modules/tabs";
+import {mainSlider} from "./modules/mainSlider";
 
 const onDocumentLoaded = () => {
     const _requestBlock = getCookie(COOKIE_REQUEST_BLOCK);
@@ -22,6 +24,8 @@ const onDocumentLoaded = () => {
     modal();
     languageSwitcher();
     breakpoints();
+    tabs();
+    mainSlider();
 };
 
 document.addEventListener("DOMContentLoaded", onDocumentLoaded);

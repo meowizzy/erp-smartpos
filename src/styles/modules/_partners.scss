@@ -1,0 +1,51 @@
+.partners {
+  $self: &;
+
+  &__title {
+    margin-bottom: 50px;
+
+    @media all and (max-width: 639px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__items-wrap {
+    overflow: hidden;
+    display: flex;
+    &:hover {
+      @media all and (min-width: 1025px) {
+        #{$self}__items-list {
+          animation-play-state: paused;
+        }
+      }
+    }
+  }
+
+  &__items-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: calc((var(--container-width) / 5) * var(--length));
+    flex-shrink: 0;
+
+    @media all and (max-width: 639px) {
+      width: calc(var(--container-width) / 3 * var(--length));
+    }
+  }
+
+  &__item {
+    width: calc(var(--container-width) / 5 - 100px);
+    flex-shrink: 0;
+    margin: 0 50px;
+    text-align: center;
+
+    @media all and (max-width: 639px) {
+      margin: 0 25px;
+      width: calc(var(--container-width) / 3 - 50px);
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}

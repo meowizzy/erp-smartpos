@@ -1,0 +1,27 @@
+<section id="partners">
+    <div class="partners mg-block">
+        <div class="container">
+            <div class="partners__inner">
+                <div class="partners__title title-lg">
+                    <span>{{{partners.title}}}</span>
+                </div>
+                <div class="partners__items-wrap" style="--length: {{length partners.items}}">
+                    <div class="partners__items-list marquee">
+                        {{#each partners.items}}
+                            <div class="partners__item">
+                                <img src="{{this.url}}" alt="{{this.title}}">
+                            </div>
+                        {{/each}}
+                    </div>
+                    <div aria-hidden="true" class="partners__items-list marquee">
+                        {{#each partners.items}}
+                            <div class="partners__item">
+                                <img src="{{this.url}}" alt="{{this.title}}">
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

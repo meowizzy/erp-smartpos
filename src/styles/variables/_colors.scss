@@ -12,5 +12,7 @@
   --color-gray: rgb(var(--color-gray-rgb));
 
   --color-light-gray-rgb: 229, 231, 236;
-  --color-light-gray: var(var(--color-light-gray-rgb));
+  --color-light-gray: rgb(var(--color-light-gray-rgb));
+
+  --primary-gradient: linear-gradient(231.91deg, #DDFCF5 14.69%, rgba(197, 217, 254, 0.52) 98.26%);
 }

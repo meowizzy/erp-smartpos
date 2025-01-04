@@ -1,14 +1,40 @@
 .banner {
+  overflow: hidden;
   &__inner {
     display: flex;
     align-items: stretch;
     position: relative;
     padding: 50px 0;
     margin-bottom: 87px;
+
+    @media all and (max-width: 1024px) {
+      padding: 30px 0;
+    }
+
+    @media all and (max-width: 639px) {
+      margin-bottom: 32px;
+    }
+
+    @media all and (max-width: 480px) {
+      padding: 12px 0;
+    }
   }
   &__left {
-    width: 52%;
-    margin-right: 50px;
+    width: 54%;
+    @media all and (max-width: 1024px) {
+      width: 100%;
+      text-align: center;
+    }
+
+    @media all and (max-width: 639px) {
+      text-align: left;
+    }
+
+    @media all and (max-width: 480px) {
+      .lp-button {
+        width: 100%;
+      }
+    }
   }
   &__title {
     font-size: 62px;
@@ -16,21 +42,44 @@
     text-transform: uppercase;
     font-family: var(--primary-font);
     margin-bottom: 16px;
+
+    @media all and (max-width: 1024px) {
+      font-size: 45px;
+    }
+
+    @media all and (max-width: 639px) {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
   }
   &__subtitle {
     font-size: 24px;
     font-weight: 400;
     color: rgba(124, 124, 124, 1);
     margin-bottom: 42px;
+
+    @media all and (max-width: 639px) {
+      margin-bottom: 32px;
+    }
+
+    @media all and (max-width: 480px) {
+      font-size: 14px;
+      max-width: 272px;
+    }
   }
   &__right {
-    --test: calc(100vw - var(--container-width));
+    pointer-events: none;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 52%;
-    right: calc((100vw - var(--container-width)) / 2 * -1);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 58%;
+    width: 783px;
+    height: 454px;
     background-image: url("../images/banner.png");
     @include bg-op(cover, center left, no-repeat);
+
+    @media all and (max-width: 1024px) {
+      display: none;
+    }
   }
 }

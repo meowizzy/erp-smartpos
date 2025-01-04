@@ -1,0 +1,66 @@
+<section id="main-slider">
+    <div class="main-slider container mg-block">
+        <div class="main-slider__title title-lg">
+            <span>{{{slider.title}}}</span>
+        </div>
+        <div class="main-slider__wrapper">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                {{#each slider.slides}}
+                    <div class="main-slider__item swiper-slide bl-gradient">
+                        {{#if this.flag}}
+                            <div class="main-slider__flag">{{{this.flag}}}</div>
+                        {{/if}}
+                        <div class="main-slider__item-left">
+                            <div class="main-slider__item-title title-md">
+                                <span>{{{this.title}}}</span>
+                            </div>
+                            {{#if this.description}}
+                                <div class="main-slider__item-description">
+                                    {{{this.description}}}
+                                </div>
+                            {{/if}}
+                            <ul class="main-slider__item-list">
+                                {{#each this.list}}
+                                    <li>
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use xlink:href="#checkIcon"/>
+                                        </svg>
+                                        {{{this}}}
+                                    </li>
+                                {{/each}}
+                            </ul>
+                            <div class="main-slider__item-price">
+                                {{{this.price}}}
+                            </div>
+                            <div class="main-slider__item-btns">
+                                {{#each this.buttons}}
+                                    {{> button title=this.text selectors=this.type link=this.url }}
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div class="main-slider__item-right">
+                            <div class="main-slider__item-pic">
+                                <img src="{{this.url}}" alt="{{{this.title}}}">
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+            </div>
+            <div class="main-slider__arrows">
+                <button class="main-slider__arrow-prev">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#swiperPrevArrowIcon"/>
+                    </svg>
+                </button>
+                <button class="main-slider__arrow-next">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#swiperNextArrowIcon"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="main-slider__pagination slider-pagination"></div>
+        </div>
+    </div>
+</section>

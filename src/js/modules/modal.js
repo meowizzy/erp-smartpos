@@ -40,6 +40,10 @@ export const modal = () => {
             }
         }
 
+        if (target.closest("[data-modal] a[href]")) {
+            closeModal(target.closest("[data-modal]"));
+        }
+
         if (target.closest("[data-modal-close]") || target.closest("[data-modal-backdrop]") ) {
             const modal = target.closest("[data-modal]");
 

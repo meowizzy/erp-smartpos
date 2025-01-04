@@ -1,0 +1,37 @@
+<section id="web-kassa">
+    <div class="web-kassa">
+        <div class="container">
+            <div class="web-kassa__inner bl-gradient mg-block">
+                <div class="web-kassa__left">
+                    <div class="web-kassa__title title-lg">
+                        <span>{{{web_kassa.title}}}</span>
+                    </div>
+                    <p class="web-kassa__subtitle">
+                        {{{web_kassa.subtitle}}}
+                    </p>
+                    <ul class="web-kassa__list">
+                        {{#each web_kassa.list}}
+                            <li>
+                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use xlink:href="#plusIcon"/>
+                                </svg>
+                                {{{this}}}
+                            </li>
+                        {{/each}}
+                    </ul>
+                    <div class="web-kassa__bot-text">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#refreshIcon"/>
+                        </svg>
+                        {{{web_kassa.text}}}
+                    </div>
+                </div>
+                <div class="web-kassa__right">
+                    <div class="web-kassa__pic">
+                        <img src="{{web_kassa.url}}" alt="{{web_kassa.title}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

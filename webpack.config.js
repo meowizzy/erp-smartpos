@@ -117,12 +117,12 @@ module.exports = (env) => {
                     })
                 })
             }),
-            /*new CopyWebpackPlugin({
+            new CopyWebpackPlugin({
                 patterns: [
                     { from: "./src/images",  to: "./assets" },
-                    { from: "./src/media",  to: "./assets" }
+                    // { from: "./src/media",  to: "./assets" }
                 ]
-            }),*/
+            }),
             isDev && new MiniCssExtractPlugin({
                 filename: `css/bundle.css?ver=${Date.now()}`,
             }),

@@ -1,0 +1,47 @@
+<section id="tabs">
+    <div class="tabs mg-block">
+        <div class="container">
+            <div class="tabs__inner">
+                <div class="tabs__title title-lg">
+                    <span>{{{tabs.title}}}</span>
+                </div>
+                <nav class="tabs__navigation">
+                    <ul class="tabs__list">
+                        {{#each tabs.items}}
+                            <li class="tabs__item">
+                                <a href="#tab_{{@key}}">{{{this.name}}}</a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </nav>
+                <div class="tabs__track">
+                    {{#each tabs.items}}
+                        <div class="tabs__content" id="tab_{{@key}}">
+                            <div class="tabs__content-left">
+                                <div class="tabs__content-title title-md">
+                                    <span>{{{this.content.title}}}</span>
+                                </div>
+                                <p class="tabs__content-subtitle">
+                                    {{{this.content.subtitle}}}
+                                </p>
+                                <ul class="tabs__content-list">
+                                    {{#each this.content.list}}
+                                        <li>
+                                            {{{this}}}
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                                {{> button title=this.content.button.name link=this.content.button.url selectors="primary"}}
+                            </div>
+                            <div class="tabs__content-right">
+                                <div class="tabs__content-pic">
+                                    <img src="{{this.content.url}}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

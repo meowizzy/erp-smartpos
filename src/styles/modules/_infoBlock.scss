@@ -1,0 +1,61 @@
+.infoBlock {
+
+  &__inner {
+    background-color: var(--color-gray);
+    border-radius: var(--radius-xl);
+    padding: 52px;
+    display: flex;
+    align-items: center;
+    background-image: url("data:image/svg+xml,%3Csvg width='303' height='189' viewBox='0 0 303 189' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M97.136 -15.8767C157.662 -15.8767 206.728 33.1903 206.728 93.7186C206.728 154.244 157.662 203.311 97.136 203.311V-15.8767Z' fill='%23EAECF1'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M29.198 7.98254C68.136 17.0701 97.1424 52.0018 97.1424 93.7108C97.1424 135.417 68.136 170.348 29.198 179.436V7.98254Z' fill='%23EAECF1'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.960938 41.1451C17.9755 52.4401 29.1956 71.7733 29.1956 93.7272C29.1956 115.681 17.9755 135.011 0.960938 146.306V41.1451Z' fill='%23EAECF1'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M206.734 7.98254C245.675 17.0701 274.681 52.0018 274.681 93.7108C274.681 135.417 245.675 170.348 206.734 179.436V7.98254Z' fill='%23EAECF1'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M274.68 41.1451C291.694 52.4401 302.914 71.7733 302.914 93.7272C302.914 115.681 291.694 135.011 274.68 146.306V41.1451Z' fill='%23EAECF1'/%3E%3C/svg%3E%0A");
+    @include bg-op(contain, center right 45px, no-repeat);
+
+    @media all and (max-width: 1023px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    @media all and (max-width: 639px) {
+      padding: 24px 16px;
+      background-image: none;
+    }
+  }
+
+  &__left, &__right {
+    text-align: left;
+    @media all and (min-width: 1024px) {
+      width: 50%;
+    }
+  }
+
+  &__left {
+    text-transform: uppercase;
+
+    @media all and (max-width: 1023px) {
+      margin-bottom: 16px;
+    }
+
+    @media all and (max-width: 479px) {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    span {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+  }
+
+  &__right {
+    font-size: 24px;
+    line-height: 31.2px;
+
+    @media all and (min-width: 1024px) {
+      padding: 10.5px 16px;
+    }
+
+    @media all and (max-width: 479px) {
+      font-size: 16px;
+      line-height: 20.8px;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+.possibilities {
+
+  &__title {
+    margin-bottom: 50px;
+    @media all and (min-width: 768px) {
+      max-width: 71%;
+    }
+
+    @media all and (max-width: 639px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media all and (min-width: 1025px) {
+      margin: 0 -10px;
+    }
+  }
+
+  &__item-pic-outer {
+    line-height: 0;
+    pointer-events: none;
+    @media all and (min-width: 1025px) {
+      position: absolute;
+      top: 37px;
+    }
+
+    @media all and (max-width: 1024px) {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media all and (max-width: 639px) {
+      width: 100%;
+      margin-bottom: -50px;
+    }
+
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__item-content {
+    width: 70%;
+
+    @media all and (max-width: 1024px) {
+      width: 60%;
+    }
+
+    @media all and (max-width: 639px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-text {
+    color: rgba(124, 124, 124, 1);
+  }
+
+  &__item-title, &__item-text {
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    background-color: var(--color-gray);
+    padding: 30px;
+    border-radius: var(--radius-xl);
+    margin: 0 10px 20px;
+    overflow: hidden;
+    position: relative;
+    min-height: 260px;
+    width: calc(50% - 20px);
+    $self: &;
+
+    @media all and (max-width: 1024px) {
+      width: 100%;
+      margin: 0 0 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    @media all and (max-width: 639px) {
+      flex-direction: column;
+    }
+
+    &-pic {
+      @media all and (max-width: 1024px) {
+        max-width: 300px;
+      }
+
+      @media all and (max-width: 639px) {
+        max-width: 233px;
+      }
+    }
+
+    &:first-child {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+
+      #{$self}-content {
+        @media all and (min-width: 1025px) {
+          max-width: 550px;
+          width: 100%;
+        }
+      }
+
+      #{$self}-pic-outer {
+        @media all and (min-width: 1025px) {
+          position: relative;
+          flex-grow: 1;
+          text-align: center;
+          margin-top: -7px;
+          margin-bottom: -110px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      #{$self}-pic-outer {
+        @media all and (min-width: 1025px) {
+          right: -167px;
+        }
+
+        //@media all and (max-width: 1024px) {
+        //  margin-top: -7px;
+        //  margin-bottom: -70px;
+        //}
+      }
+    }
+
+    &:nth-child(3) {
+      #{$self}-pic-outer {
+        @media all and (min-width: 1025px) {
+          right: -60px;
+        }
+
+        //@media all and (max-width: 1024px) {
+        //  margin-top: -7px;
+        //  margin-bottom: -70px;
+        //}
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.web-kassa {
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    @media all and (max-width: 800px) {
+      flex-direction: column;
+    }
+
+    @media all and (max-width: 639px) {
+      padding: 32px;
+    }
+
+    @media all and (max-width: 479px) {
+      padding: 24px 16px;
+      border-radius: var(--radius-lg);
+    }
+  }
+
+  &__left {
+    width: calc(100% - 433px);
+    margin-right: 67px;
+
+    @media all and (max-width: 1023px) {
+      width: calc(100% - 350px);
+    }
+
+    @media all and (max-width: 800px) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 42px;
+    }
+  }
+
+  &__title, &__subtitle {
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    color: rgba(124, 124, 124, 1);
+    font-size: 20px;
+    font-weight: 500;
+
+    @media all and (max-width: 479px) {
+      font-size: 14px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 32px;
+
+    li {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+
+      @media all and (max-width: 479px) {
+        font-size: 14px;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+        color: var(--color-primary);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__bot-text {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 8px 16px;
+    border-radius: 100px;
+    background-color: rgba(var(--color-primary-rgb), 0.08);
+    display: flex;
+    align-items: center;
+
+    @media all and (max-width: 479px) {
+      font-size: 14px;
+      line-height: 18.2px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      color: var(--color-primary);
+    }
+  }
+
+  &__right {
+    max-width: 433px;
+    width: 100%;
+
+    @media all and (max-width: 1023px) and (min-width: 801px) {
+      max-width: 350px;
+    }
+
+    @media all and (max-width: 479px) {
+      text-align: center;
+    }
+  }
+
+  &__pic {
+    @media all and (max-width: 479px) {
+      max-width: 287px;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}

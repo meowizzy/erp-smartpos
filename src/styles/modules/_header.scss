@@ -4,6 +4,11 @@
   padding-top: 58px;
   padding-bottom: 58px;
 
+  @media all and (max-width: 1280px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   @media all and (max-width: 959px) {
     padding-top: 12px;
     padding-bottom: 12px;
