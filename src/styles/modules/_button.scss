@@ -12,6 +12,28 @@
   font-family: var(--primary-font);
   font-size: 16px;
 
+  &:before {
+    content: "";
+    display: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: rotating 1s linear infinite;
+    margin-right: 10px;
+  }
+
+  &.loading {
+    pointer-events: none;
+
+    &:after {
+      opacity: 1;
+    }
+
+    &:before {
+      display: block;
+    }
+  }
+
   @media all and (max-width: 768px) {
     span {
       font-size: 14px;
@@ -54,6 +76,11 @@
   &.primary {
     color: var(--color-white);
     background-color: var(--color-primary);
+
+    &:before {
+      border: 2px solid var(--color-white);
+      border-bottom: 2px solid transparent;
+    }
   }
 
   &.primary {
@@ -68,6 +95,10 @@
     background-color: var(--color-white);
     color: var(--color-black);
     transition: box-shadow var(--transition);
+    &:before {
+      border: 2px solid var(--color-primary);
+      border-bottom: 2px solid transparent;
+    }
     &:hover {
       box-shadow: inset 0 0 0 2px var(--color-primary);
     }

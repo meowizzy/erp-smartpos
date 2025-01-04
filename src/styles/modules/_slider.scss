@@ -105,7 +105,9 @@
     }
 
     &:hover {
-      transform: translateY(-50%) translateX(10px);
+      @media all and (min-width: 640px) {
+        transform: translateY(-50%) translateX(10px);
+      }
     }
   }
 
@@ -117,7 +119,9 @@
     }
 
     &:hover {
-      transform: translateY(-50%) translateX(-10px);
+      @media all and (min-width: 640px) {
+        transform: translateY(-50%) translateX(-10px);
+      }
     }
   }
 

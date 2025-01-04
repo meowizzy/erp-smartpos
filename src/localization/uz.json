@@ -1,46 +1,46 @@
 {
   "advantages": [
     {
-      "text": "Система для управления продажами, товарами и программами лояльности",
+      "text": "Tovar, mijozlar, kassa, moliya hisobi va boshqalar - hammasi sodda va qulay tizimda",
       "icon": "<svg width=\"36\" height=\"36\" viewBox=\"0 0 36 36\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><use xlink:href='#graphIcon'/></svg>"
     },
     {
-      "text": "Готовые комплекты оборудования\n",
+      "text": "Tayyor qurilma toʻplamlari",
       "icon": "<svg width=\"37\" height=\"36\" viewBox=\"0 0 37 36\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><use xlink:href='#boxIcon'/></svg>"
     },
     {
-      "text": "Настройка, обучение\nи поддержка 24/7",
+      "text": "Sozlash, oʻrgatish va 24/7 qoʻllab- quvvatlash",
       "icon": "<svg width=\"37\" height=\"36\" viewBox=\"0 0 37 36\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><use xlink:href='#headPhonesIcon'/></svg>"
     }
   ],
   "banner": {
-    "title": "СИСТЕМА \u2028АВТОМАТИЗАЦИИ БИЗНЕСА",
+    "title": "BIZNESNI AVTOMATLASHTIRISH TIZIMI",
     "subtitle": "Учет товаров, клиентов, кассы, финансов и многое другое — все в одной простой и удобной системе",
     "button": {
-      "text": "Получить консультацию",
+      "text": "Maslahat olish",
       "url": "#callback"
     }
   },
   "menu": [
     {
-      "label": "Функционал",
+      "label": "Funksional",
       "url": "#possibilities"
     },
     {
-      "label": "Партнеры",
+      "label": "Hamkorlar",
       "url": "#partners"
     },
     {
-      "label": "Тип бизнеса",
+      "label": "Biznes turi",
       "url": "#tabs"
     },
     {
-      "label": "Касса",
+      "label": "Kassa",
       "url": "#web-kassa"
     }
   ],
   "possibilities": {
-    "title": "Весь необходимый функционал в одной системе",
+    "title": "Sotuvlar, tovarlar va sodiqlik dasturini boshqarish uchun tizim",
     "items": [
       {
         "title": "Складской учет",
@@ -104,12 +104,12 @@
     ]
   },
   "tabs": {
-    "title": "Выберите свой тип бизнеса",
+    "title": "BIZNESINGIZ TURINI TANLANG",
     "items": [
       {
-        "name": "Продовольственные магазины",
+        "name": "Oziq-ovqat doʻkonlari",
         "content": {
-          "title": "Продовольственные магазины",
+          "title": "Oziq-ovqat doʻkonlari",
           "subtitle": "продавайте без очередей и управляйте складом",
           "list": [
             "<strong>Продавайте быстро и без очередей:</strong> удобный интерфейс для кассиров",
@@ -120,15 +120,15 @@
           ],
           "url": "./assets/tabs_1.png",
           "button": {
-            "name": "Получить консультацию",
+            "name": "Maslahat olish",
             "url": "#callback"
           }
         }
       },
       {
-        "name": "Бутики",
+        "name": "Butiklar",
         "content": {
-          "title": "Бутики | Fashion retail",
+          "title": "Butiklar | Fashion retail",
           "subtitle": "Управляйте ассортиментом, ценами и остатками товаров с максимальной точностью",
           "list": [
             "<strong>Удобный интерфейс:</strong> упрощает работу за счет отображения\nфото и группировки по цветам и размерам",
@@ -139,15 +139,15 @@
           ],
           "url": "./assets/tabs_2.png",
           "button": {
-            "name": "Получить консультацию",
+            "name": "Maslahat olish",
             "url": "#callback"
           }
         }
       },
       {
-        "name": "Кафе и рестораны",
+        "name": "Kafe va restoranlar",
         "content": {
-          "title": "Кафе и рестораны",
+          "title": "Kafe va restoranlar",
           "subtitle": "Ускорьте обслуживание и оптимизируйте работу кухни",
           "list": [
             "<strong>Управляйте кухней:</strong> отслеживание остатков продуктов, автоматизация заказов",
@@ -157,15 +157,15 @@
           ],
           "url": "./assets/tabs_3.png",
           "button": {
-            "name": "Получить консультацию",
+            "name": "Maslahat olish",
             "url": "#callback"
           }
         }
       },
       {
-        "name": "Сфера услуг",
+        "name": "Xizmat koʻrsatish",
         "content": {
-          "title": "Сфера услуг",
+          "title": "Xizmat koʻrsatish",
           "subtitle": "Ведите запись клиентов и автоматизируйте расчеты\n",
           "list": [
             "<strong>Автоматизация расчетов:</strong> прозрачность финансовых операций",
@@ -174,15 +174,15 @@
           ],
           "url": "./assets/tabs_4.png",
           "button": {
-            "name": "Получить консультацию",
+            "name": "Maslahat olish",
             "url": "#callback"
           }
         }
       },
       {
-        "name": "Табачные и алкогольные магазины",
+        "name": "Tamaki va alkogol mahsulotlari doʻkonlari",
         "content": {
-          "title": "Табачные и алкогольные магазины",
+          "title": "Tamaki va alkogol mahsulotlari doʻkonlari",
           "subtitle": "Учитывайте маркированные товары и соблюдайте все нормы",
           "list": [
             "<strong>Учет маркированных товаров:</strong> полное соответствие законодательству",
@@ -192,15 +192,15 @@
           ],
           "url": "./assets/tabs_5.png",
           "button": {
-            "name": "Получить консультацию",
+            "name": "Maslahat olish",
             "url": "#callback"
           }
         }
       },
       {
-        "name": "Аптеки",
+        "name": "Dorixonalar",
         "content": {
-          "title": "Аптеки",
+          "title": "Dorixonalar",
           "subtitle": "Упрощенная работа с маркированными товарами и большой базой товаров",
           "list": [
             "<strong>Работа с маркировкой и кодами:</strong> автоматизация проверки кодов агрегации для соответствия требованиям",
@@ -210,7 +210,7 @@
           ],
           "url": "./assets/tabs_6.png",
           "button": {
-            "name": "Получить консультацию",
+            "name": "Maslahat olish",
             "url": "#callback"
           }
         }
@@ -251,12 +251,12 @@
         "price": "<strong>Цена:</strong> <span>2 699 000 сум + тариф от 85 000 сум</span>",
         "buttons": [
           {
-            "text": "Приобрести",
+            "text": "Sotib olish",
             "url": "#callback",
             "type": "primary"
           },
           {
-            "text": "Купить в рассрочку",
+            "text": "Muddatli toʻlovga olish",
             "url": "#callback",
             "type": "secondary"
           }
@@ -283,14 +283,14 @@
     ]
   },
   "callback_form": {
-    "title": "Оставьте заявку",
+    "title": "Ariza qoldiring",
     "subtitle": "Мы свяжемся с вами в течение дня и предложим <br> оптимальные решения для вашего бизнеса",
     "inputs": [
       {
         "type": "text",
         "name": "name",
         "required": true,
-        "placeholder": "Имя"
+        "placeholder": "Ismingizni kiriting"
       },
       {
         "type": "text",
@@ -299,14 +299,14 @@
         "placeholder": "+998"
       }
     ],
-    "form_button": "Отправить"
+    "form_button": "Yuborish"
   },
   "errors": {
-    "incorrectPhoneNumber": "Некорректный номер телефона",
-    "failedToSubmitRequest": "Не удалось отправить заявку"
+    "incorrectPhoneNumber": "Noto‘g‘ri telefon raqami",
+    "failedToSubmitRequest": "Ariza yuborilmadi"
   },
   "notifications": {
-    "requisitionSuccess": "Заявка успешно отправлена. <br> <span class=\"sub\" style=\"font-size: var(--font-size-xm)\">Мы свяжемся с Вами в ближайшее время.</span>"
+    "requisitionSuccess": "Ariza muvaffaqiyatli yuborildi. <br> <span class=\"sub\" style=\"font-size: var(--font-size-xm)\">Biz siz bilan yaqin vaqt ichida bog‘lanamiz.</span>"
   },
-  "copyrightText": "Smartpos. Все права защищены."
+  "copyrightText": "Smartpos. Barcha huquqlar himoyalangan."
 }

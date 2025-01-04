@@ -1,27 +1,35 @@
 <section class="callback" id="callback">
     <div class="container mg-block">
-        <div class="callback__col">
-            <div class="callback__head">
-                <div class="callback__title title-lg">
-                    <span>{{callback_form.title}}</span>
-                </div>
-                <div class="callback__desc text-xm">
-                    {{{callback_form.subtitle}}}
-                </div>
+        <div class="callback__inner">
+            <div class="callback__pic">
+                <picture>
+                    <source srcset="./assets/callback_desktop.png" media="all and (min-width: 640px)">
+                    <img src="./assets/callback_mobile.png" alt="callback_mob">
+                </picture>
             </div>
-            <div class="callback__form">
-                <form class="form">
-                    <div class="form__fields-group">
-                        {{#each callback_form.inputs}}
-                            <div class="form__field">
-                                <input type="{{this.type}}" name="{{this.name}}" required="{{this.required}}" placeholder={{this.placeholder}}>
-                            </div>
-                        {{/each}}
+            <div class="callback__col">
+                <div class="callback__head">
+                    <div class="callback__title title-lg">
+                        <span>{{callback_form.title}}</span>
                     </div>
-                    <div class="form__field">
-                        {{> button title=callback_form.form_button selectors="primary"}}
+                    <div class="callback__desc text-xm">
+                        {{{callback_form.subtitle}}}
                     </div>
-                </form>
+                </div>
+                <div class="callback__form">
+                    <form class="form">
+                        <div class="form__fields-group">
+                            {{#each callback_form.inputs}}
+                                <div class="form__field">
+                                    <input type="{{this.type}}" name="{{this.name}}" required="{{this.required}}" placeholder="{{this.placeholder}}">
+                                </div>
+                            {{/each}}
+                        </div>
+                        <div class="form__field">
+                            {{> button title=callback_form.form_button selectors="primary"}}
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

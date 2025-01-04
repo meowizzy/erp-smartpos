@@ -111,7 +111,7 @@ module.exports = (env) => {
                     chunks: ["main"],
                     minify: false,
                     templateParameters: Object.assign(tpl.data,{
-                        title: "Smartpos Business",
+                        title: "ERP Smartpos",
                         lang: key,
                         copyright: `© <span id="curYear">${new Date().getFullYear()}</span> ${tpl.data.copyrightText}`
                     })
@@ -123,7 +123,7 @@ module.exports = (env) => {
                     // { from: "./src/media",  to: "./assets" }
                 ]
             }),
-            isDev && new MiniCssExtractPlugin({
+            !isDev && new MiniCssExtractPlugin({
                 filename: `css/bundle.css?ver=${Date.now()}`,
             }),
             new webpack.DefinePlugin({
@@ -137,7 +137,7 @@ module.exports = (env) => {
             },
             proxy: {
                 "/api": {
-                    target: "https://business.smartpos.uz",
+                    target: "https://erp.smartpos.uz",
                     secure: false,
                     changeOrigin: true,
                 },

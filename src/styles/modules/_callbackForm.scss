@@ -1,25 +1,61 @@
 .callback {
-  .container {
+
+  &__pic {
+    line-height: 0;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    max-width: calc(100% - 620px);
+    pointer-events: none;
+
+    @media all and (max-width: 1279px) {
+      max-width: calc(100% - 520px);
+    }
+
+    @media all and (max-width: 1024px) and (min-width: 640px) {
+      display: none;
+    }
+
+    @media all and (max-width: 639px) {
+      max-width: unset;
+      position: static;
+      margin: -90px -32px -32px;
+    }
+
+    @media all and (max-width: 479px) {
+      margin: -90px -16px -24px;
+    }
+
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__inner {
     background-color: rgba(199, 244, 233, 1);
     border-radius: var(--radius-lg);
     padding: 52px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 395px;
 
-    @media all and (min-width: 640px) {
-      min-height: 395px;
+    @media all and (max-width: 639px) {
+      flex-direction: column-reverse;
     }
 
-    &:before {
-      @include pseudo();
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      pointer-events: none;
-      //background-image: url("../images/form-terminal.png");
-      @include bg-op(40%, left center, no-repeat);
-    }
+    //&:before {
+    //  @include pseudo();
+    //  top: 0;
+    //  left: 0;
+    //  right: 0;
+    //  bottom: 0;
+    //  pointer-events: none;
+    //  //background-image: url("../images/form-terminal.png");
+    //  @include bg-op(40%, left center, no-repeat);
+    //}
 
     &.form-success {
       display: flex;
@@ -31,9 +67,6 @@
         justify-content: center;
       }
       @media all and (max-width: 639px) {
-        &:before {
-          display: none !important;
-        }
         padding-bottom: 40px;
       }
 
@@ -53,21 +86,12 @@
       }
     }
 
-    @media all and (max-width: 1024px) {
-      padding: 60px;
-    }
-
-    @media all and (max-width: 768px) {
-      padding: 50px;
-    }
-
     @media all and (max-width: 639px) {
-      padding: 40px 30px 350px;
-      &:before {
-        bottom: -5.5rem;
-        //background-image: url("../images/callbackFormMobile.png");
-        @include bg-op(340px, center bottom, no-repeat);
-      }
+      padding: 32px;
+    }
+
+    @media all and (max-width: 479px) {
+      padding: 24px 16px;
     }
 
     @media all and (max-width: 480px) {
@@ -90,17 +114,24 @@
   }
 
   &__head {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     @media all and (max-width: 639px) {
       text-align: center;
     }
   }
 
   &__col {
-    width: 50%;
+    max-width: 620px;
+    width: 100%;
     margin-left: auto;
-    @media all and (max-width: 639px) {
+
+    @media all and (max-width: 1279px) {
+      max-width: 520px;
+    }
+
+    @media all and (max-width: 1024px) {
       width: 100%;
+      max-width: unset;
     }
     .success {
       line-height: 1.2;
@@ -115,14 +146,14 @@
   }
 
   &__title {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     @media all and (max-width: 768px) {
       margin-bottom: 20px;
     }
   }
 
   &__desc {
-
+    font-size: 18px;
   }
 
   &__form {
@@ -134,8 +165,14 @@
       margin-bottom: 18px;
     }
 
+    .lp-button {
+      max-width: 237px;
+      width: 100%;
+    }
+
     @media all and (max-width: 639px) {
       .lp-button {
+        max-width: unset;
         width: 100%;
       }
     }
