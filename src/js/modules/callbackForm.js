@@ -47,7 +47,7 @@ export const callbackForm = () => {
             $form = document.querySelector(".callback__form form");
         }
 
-        $form.closest(".container").classList.add("form-success");
+        $form.closest(".container .callback__inner").classList.add("form-success");
         $form.closest(".callback__col").innerHTML = `
             <div class="success-icon">
                 <svg width="800px" height="800px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="okIconTitle" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#ffffff"> <title id="okIconTitle">Ok</title> <polyline points="4 13 9 18 20 7"/> </svg>
@@ -131,7 +131,7 @@ export const callbackForm = () => {
             const responses = await Promise.allSettled(requests);
             const { value: resolvedRequest } = await responses.find((res) => res.value?.ok);
 
-            if (resolvedRequest.ok) {
+            if (resolvedRequest?.ok) {
                 const exp = new Date();
                 exp.setHours(exp.getHours() + 1);
 

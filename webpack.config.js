@@ -112,8 +112,7 @@ module.exports = (env) => {
                     minify: false,
                     templateParameters: Object.assign(tpl.data,{
                         title: "ERP Smartpos",
-                        lang: key,
-                        copyright: `© <span id="curYear">${new Date().getFullYear()}</span> ${tpl.data.copyrightText}`
+                        lang: key
                     })
                 })
             }),
